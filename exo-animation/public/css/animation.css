@@ -1,5 +1,5 @@
 div {
-  animation: mymove2 4s 2s;
+  animation: mymove2 4s infinite 2s;
 }
 @keyframes mymove2 {
     0% {left: 0px; top: 0px;} /* 0% */
@@ -12,15 +12,21 @@ div:hover{
   animation-play-state: paused;
 }
 h2{
-  animation: mymove3 2s infinite alternate-reverse;
+  animation: mymove3 0.5s infinite alternate linear;
+  position: relative;
 }
 @keyframes mymove3 {
-  0%{
-
+  from{
+    transform: scaleY(1);
+    transform: scaleX(2);
+    transform-origin: 0 0;
+    bottom: 0px;
   }
-  100%{
-    font-size: 150%;
-    margin-bottom: 10%;
+  to{
+    transform: scaleY(2);
+    transform: scaleX(1);;
+    transform-origin: 0 0;
+    bottom: 100px;
   }
 }
 
